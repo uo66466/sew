@@ -1,0 +1,131 @@
+/* ****************************************/
+/*             LaVuelta2026               */
+/*          Estilos generales             */
+/* ****************************************/
+/*    DATOS ESTUDIANTE                    */
+/* ---------------------------------------*/
+/*  Nombre y Apellidos: Roberto Balbin    */
+/*  Correo electrónico (uniovi): uo66466@uniovi.es */
+/*  Grupo de laboratorio:                 */
+/* ****************************************/
+
+/*
+    GAMA CROMÁTICA WEB
+
+    Color principal:  #684B41
+    Color secundario: #F9F0F5
+    Color negro:      #000000
+    Color blanco:     #FFFFFF
+
+    ANÁLISIS DEL CONTRASTE
+
+    La gama cromática utiliza cuatro colores.
+    El color principal se utiliza como color destacado
+    y como fondo de la cabecera y del pie de página.
+
+    El color blanco se utiliza como fondo general de la
+    página y como color del texto situado sobre el color
+    principal.
+
+    El color negro se utiliza como color general del texto.
+
+    El color secundario completa la gama cromática del sitio.
+
+    Los colores se definen mediante variables CSS y todas
+    las reglas utilizan dichas variables para establecer
+    los colores del documento.
+*/
+
+
+/* Especificidad: 010 */
+:root {
+    --color-principal: #684B41;
+    --color-secundario: #F9F0F5;
+    --color-negro: #000000;
+    --color-blanco: #FFFFFF;
+}
+
+
+/* Especificidad: 001 */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+}
+
+
+/* Especificidad: 001 */
+header {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+
+/* Especificidad: 001 */
+footer {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+}
+
+/* Especificidad: 001, 001, 001, 001 */
+/* ADVERTENCIA: color de fondo heredado del elemento contenedor correspondiente. */
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--color-principal);
+}
+
+
+/* Especificidad: 002, 002 */
+/* ADVERTENCIA: color de fondo heredado de header y footer: --color-principal. */
+header a,
+footer a {
+    color: var(--color-blanco);
+    text-decoration: none;
+}
+
+
+/* Especificidad: 011 */
+a[aria-current="page"] {
+    font-weight: bold;
+}
+
+
+/* Especificidad: 003 */
+header + nav > ol {
+    list-style: none;
+    font-size: 0.8em;
+}
+
+
+/* Especificidad: 004 */
+header + nav > ol > li {
+    display: inline;
+}
+
+
+/* Especificidad: 014 */
+header + nav > ol > li:last-child {
+    font-weight: bold;
+}
+
+
+/* Especificidad: 014 */
+section:has(picture) > ul > li:first-child {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+
+/* Especificidad: 014 */
+section:has(picture) > ul > li:nth-child(3) {
+    font-size: 1.3em;
+}
+
+
+/* Especificidad: 014 */
+section:has(picture) > ul > li:nth-child(4) {
+    font-weight: bold;
+}

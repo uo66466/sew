@@ -129,3 +129,8 @@ section:has(picture) > ul > li:nth-child(3) {
 section:has(picture) > ul > li:nth-child(4) {
     font-weight: bold;
 }
+
+/* Especificidad: 002 */
+header h1 {
+    color: var(--color-blanco);
+}
